@@ -1,6 +1,6 @@
 {
   "name": "ra-data-nestjsx-crud",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "Data provider which integrates React Admin with NestJS CRUD library",
   "author": "Ramil Yanbulatov <rayman1104@gmail.com>",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "url": "https://github.com/rayman1104/ra-data-nestjsx-crud.git"
   },
   "scripts": {
-    "prepare": "install-peers",
+    "prepare": "npm run build",
     "build": "tsc -b",
     "build:watch": "tsc -b -w",
     "test": "echo \"Error: run tests from root\" && exit 1"
@@ -28,8 +28,8 @@
   "devDependencies": {
     "@types/lodash.omitby": "^4.6.6",
     "install-peers-cli": "^2.2.0",
-    "ra-core": "^3.4.1",
-    "typescript": "^3.8.3"
+    "ra-core": "^4.0.3",
+    "typescript": "^3.9.10"
   },
   "dependencies": {
     "@nestjsx/crud-request": "^4.1.0",

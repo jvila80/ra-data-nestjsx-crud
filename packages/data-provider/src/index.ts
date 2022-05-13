@@ -39,8 +39,11 @@ const composeFilter = (paramsFilter: any): QueryFilter[] => {
     if (!ops) {
       if (typeof flatFilter[key] === 'boolean' || typeof flatFilter[key] === 'number' || (typeof flatFilter[key] === 'string' && flatFilter[key].match(/^\d+$/))) {
         ops = CondOperator.EQUALS;
-      } else {
-        ops = CondOperator.CONTAINS;
+      } else if (typeof flatFilter[key] === 'string'){
+        ops = CondOperator.CONTAINS_LOW;
+        flatFilter[key] = flatFilter[key].toLowerCase();
+      }else{
+        ops = CondOperator.CONTAINS;        
       }
     }
 
